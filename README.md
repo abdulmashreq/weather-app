@@ -67,6 +67,9 @@ Enter their email
 Enter their contact phone number
 The form should be able to submit the information, and send it to an email address (actual smtp and emails not required -- just a simulation at this point).
 
+## Setup Env
+
+   Copy .env-example to .env
 
 ## Install Dependencies
 
