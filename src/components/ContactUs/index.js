@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { Container, Divider, Header, Message } from "semantic-ui-react";
-
+import EmailSimulate from "./EmailSimulate";
 import ContactForm from "./ContactForm";
 
 class ContactUs extends Component { // eslint-disable-line react/prefer-stateless-function
@@ -9,14 +9,14 @@ class ContactUs extends Component { // eslint-disable-line react/prefer-stateles
     super(props);
     this.state = {
       flag: true,
-      name: ''
+      submission: {}
     }
   }
   handleSubmit = (props) => {
     this.setState({
       ...this.state,
       flag: false,
-      name: props.Name
+      submission: props
     })
     console.log('Form successfully submited.')
   }
@@ -30,9 +30,13 @@ class ContactUs extends Component { // eslint-disable-line react/prefer-stateles
         </Header>
         {
           this.state.flag === false ?
-          <Message success>
-            <p>Thank you <b>{this.state.name}</b> for contacting us. We will assist you soon.</p>
-          </Message> :
+          <div>
+            <Message success>
+              <p>Thank you <b>{this.state.submission.Name}</b> for contacting us. We will assist you soon.</p>
+            </Message>
+            <EmailSimulate {...this.state.submission} />
+          </div>
+           :
           ''
         }
         <Container>

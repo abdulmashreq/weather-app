@@ -116,6 +116,7 @@ from docker hub
       - contact
           - Field: Name, Email, Phone, Message
           - just simulate to success message
+          - Email Simulator
     Tests
       - Test Suites: 7 passed, 7 total
         Tests:       15 passed, 15 total
