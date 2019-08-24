@@ -72,12 +72,17 @@ The form should be able to submit the information, and send it to an email addre
 
 `npm install` or `yarn install`
 
+## Build Project 
+
+`npm build` or `yarn build`
+
 
 In the project directory, you can run:
 
 We will need to run the front end and back end server to access the User Interface and Api calls. So we are using concurrent features to call both server in one command.
 
 ### `npm run startserver` or `yarn run startserver`
+
 
 I have choose unique port 3002 and 4002 just because to make sure the application runs fine for testing.
 
