@@ -10,25 +10,27 @@ import {
 
 class Lightbox extends PureComponent {
 
-    state = {
-        activeImage: 0
+    constructor(props) {
+      super(props)
+      this.state = {
+          activeImage: 0
+      }
     }
-    handleThumbnailClick = index => this.setState({ activeImage: index })
+
+    handleThumbnailClick = index => this.props.galleryImage({index: index})
 
     handleNavigateLeft = () => {
-        this.setState(prevState => {
-            if (prevState.activeImage > 0) {
-                return { activeImage: prevState.activeImage - 1}
-            }
-        })
+      let prevState = this.state;
+      if (prevState.activeImage > 0) {
+        this.props.galleryImage({index: prevState.activeImage - 1});
+      }
     }
 
     handleNavigateRight = () => {
-        this.setState(prevState => {
-            if (prevState.activeImage < this.props.images.length - 1) {
-                return { activeImage: prevState.activeImage + 1}
-            }
-        })
+        let prevState = this.state;
+        if (prevState.activeImage < this.props.images.length - 1) {
+          this.props.galleryImage({index: prevState.activeImage + 1});
+        }
     }
 
     handleKeyDown = ({keyCode}) => {
@@ -43,12 +45,19 @@ class Lightbox extends PureComponent {
         document.addEventListener('keydown', this.handleKeyDown)
     }
 
+    componentDidUpdate() {
+      // console.log(this.props.galleryImage({index: index}));
+      this.setState({
+        activeImage: this.props.index ? this.props.index : 0
+      })
+    }
+
     componentWillUnmount() {
         document.removeEventListener('keydown', this.handleKeyDown)
     }
 
     render() {
-        const { active, images, onClickOutside, onClose } = this.props
+        const { active, images, onClose } = this.props
         let { activeImage } = this.state
         if (images.length >= 1) {
             let thumbnails = images.map((image, index) => {
@@ -71,7 +80,7 @@ class Lightbox extends PureComponent {
                     <Dimmer
                         page
                         active={active}
-                        onClickOutside={onClickOutside}
+                        onClickOutside={onClose}
                     >
                         <div className='inner'>
                             <Button

@@ -9,8 +9,8 @@ class Thumbnail extends PureComponent {
         ]
     }
 
-    handleOpen() {
-      this.props.galleryOpen({});
+    handleOpen(index) {
+      this.props.galleryOpen({index: index});
     }
 
     componentDidUpdate() {
@@ -24,7 +24,7 @@ class Thumbnail extends PureComponent {
       let thumb = 'Loading...';
       if(images) {
         thumb = images.map((val, index) =>
-         <Image onClick={this.handleOpen.bind(this)} src={val.src} key={index} />
+         <Image key={index} onClick={this.handleOpen.bind(this, index)} src={val.src} />
        )
       }
       return (

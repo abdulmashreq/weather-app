@@ -2,6 +2,7 @@ import { actionTypes } from './../actions/actionTypes';
 
 export const initialState = {
   data: null,
+  activeImage: 0,
   loading: false,
   success: false,
   error: false,
@@ -35,6 +36,16 @@ export default (state = initialState, action) => {
         ...state,
         data: state.data,
         active: !state.active,
+        activeImage: !state.active ? action.payload.index : 0,
+        success: true,
+        loading: false
+      };
+
+    case actionTypes.FETCH_GALLERY_IMAGE:
+      return {
+        ...state,
+        data: state.data,
+        activeImage: action.payload.index,
         success: true,
         loading: false
       };

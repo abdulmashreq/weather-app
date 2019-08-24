@@ -23,6 +23,7 @@ import {
 class Gallery extends PureComponent {
     state = {
         active: false,
+        activeImage: 0,
         images: [
             { src: 'https://react.semantic-ui.com/images/wireframe/image.png' },
         ]
@@ -40,12 +41,14 @@ class Gallery extends PureComponent {
       this.setState({
         ...this.state,
         active: this.props.galleryData.active,
+        activeImage: this.props.galleryData.activeImage,
         images: this.props.galleryData.data ? this.props.galleryData.data : this.state.images,
       })
     }
     render() {
         const {
             active,
+            activeImage,
             images
         } = this.state
 
@@ -61,7 +64,9 @@ class Gallery extends PureComponent {
                       onClose={this.handleClose}
                       keyboardNavigation={false}
                       images={images}
-                      data-test="lightbox" 
+                      data-test="lightbox"
+                      index={activeImage}
+                      {...this.props}
                   />
               </Container>
               <Divider hidden/>

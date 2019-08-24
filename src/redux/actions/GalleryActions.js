@@ -17,4 +17,8 @@ export const galleryData = {
     type: actionTypes.FETCH_GALLERY_OPEN,
     payload,
   }),
+  galleryImage: payload => ({
+    type: actionTypes.FETCH_GALLERY_IMAGE,
+    payload,
+  })
 };
