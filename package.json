@@ -1,0 +1,65 @@
+{
+  "name": "weather-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.17.1",
+    "check-prop-types": "^1.1.2",
+    "concurrently": "^4.1.2",
+    "css-loader": "^3.2.0",
+    "dotenv-expand": "^5.1.0",
+    "history": "^4.7.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "react-scripts": "^1.0.17",
+    "redux": "^3.7.2",
+    "redux-form": "^8.2.6",
+    "redux-saga": "^0.16.0",
+    "redux-thunk": "^2.2.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.87.3",
+    "serve": "^11.1.0",
+    "watchman": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.13.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-react-app": "^2.0.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
+    "redux-devtools-extension": "^2.13.2",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "jest-enzyme": "^7.1.0",
+    "morgan": "^1.9.1",
+    "node-sass": "^4.12.0",
+    "body-parser": "^1.19.0"
+  },
+  "scripts": {
+    "start": "PORT=3002 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "prodtest": "CI=true react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "reactserve": "serve -s build -p 3002",
+    "nodestart": "node node_server/index.js",
+    "startserver": "concurrently \"npm run nodestart\" \"npm run reactserve\""
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

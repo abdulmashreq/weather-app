@@ -1,0 +1,8 @@
+version: '3'
+services:
+  web:
+    build: ./
+    image: abdulnizam/weatherapp
+    ports:
+      - "3002:3002"
+      - "4002:4002"
