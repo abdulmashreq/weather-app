@@ -98,43 +98,43 @@ from docker hub
 
 # List of tech
 
-  React
-    - Routes /, /weather/toronto, /weather/montreal, /gallery, /contact
-    - UI - React.semantic-ui
-    - Responsive
-    - PropTypes
-    - Home
-      - List of cities: Toronto, Montreal
-      - Info, Navigate to /weather/{city}
-    - /weather/{city}
-      - City Name, last update, Condition,
-      - Temperature, Feels like, Temperature unit,
-      - Weather icon, Description
-    - gallery
-        - 10 random images from google
-        - Lightbox view
-    - contact
-        - Field: Name, Email, Phone, Message
-        - just simulate to success message
-  Tests
-    - Test Suites: 7 passed, 7 total
-      Tests:       15 passed, 15 total
-      Snapshots:   0 total
-      Time:        6.988s
-      Ran all test suites.
-  Redux
-    - Saga
-  Routes
-  Node
-    - Routes /api/photo, /api/cities, /api/cities/:code
-  ES6
-  Weather icon ( - used https://erikflowers.github.io/weather-icons/ )
-  Docker
-  External API
-    - Toronto: https://www.theweathernetwork.com/api/obsdata/caon0696/c?ref=rt
-    - Montreal: https://www.meteomedia.com/api/obsdata/caqc0363/c?ref=rt
+    React
+      - Routes /, /weather/toronto, /weather/montreal, /gallery, /contact
+      - UI - React.semantic-ui
+      - Responsive
+      - PropTypes
+      - Home
+        - List of cities: Toronto, Montreal
+        - Info, Navigate to /weather/{city}
+      - /weather/{city}
+        - City Name, last update, Condition,
+        - Temperature, Feels like, Temperature unit,
+        - Weather icon, Description
+      - gallery
+          - 10 random images from google
+          - Lightbox view
+      - contact
+          - Field: Name, Email, Phone, Message
+          - just simulate to success message
+    Tests
+      - Test Suites: 7 passed, 7 total
+        Tests:       15 passed, 15 total
+        Snapshots:   0 total
+        Time:        6.988s
+        Ran all test suites.
+    Redux
+      - Saga
+    Routes
+    Node
+      - Routes /api/photo, /api/cities, /api/cities/:code
+    ES6
+    Weather icon ( - used https://erikflowers.github.io/weather-icons/ )
+    Docker
+    External API
+      - Toronto: https://www.theweathernetwork.com/api/obsdata/caon0696/c?ref=rt
+      - Montreal: https://www.meteomedia.com/api/obsdata/caqc0363/c?ref=rt
 
 # Structure
-  S.O.L.I.D Principles
-  Component based
-  TDD Approach
+    - S.O.L.I.D Principles
+    - Component based
+    - TDD Approach
