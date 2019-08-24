@@ -96,6 +96,9 @@ from docker hub
   - docker pull abdulnizam/weatherapp:latest
   - docker run -p 3002:3002 -p 4002:4002  abdulnizam/weatherapp:latest
 
+  To access: http://localhost:3002
+  To access api: http://localhost:4002/api/photo
+
 # List of tech
 
     React
