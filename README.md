@@ -98,6 +98,7 @@ React sever will be calling on [http://localhost:3002](http://localhost:3002)
 steps:
   - Clone the repo - https://github.com/abdulnizam/weather-app.git
   - cd weather-app
+  - cp .env-example .env
   - docker-compose up --build
 
 from docker hub
