@@ -67,10 +67,17 @@ Enter their email
 Enter their contact phone number
 The form should be able to submit the information, and send it to an email address (actual smtp and emails not required -- just a simulation at this point).
 
+## Setup Env
+
+   Copy .env-example to .env
 
 ## Install Dependencies
 
 `npm install` or `yarn install`
+
+## Build Project 
+
+`npm build` or `yarn build`
 
 
 In the project directory, you can run:
@@ -78,6 +85,7 @@ In the project directory, you can run:
 We will need to run the front end and back end server to access the User Interface and Api calls. So we are using concurrent features to call both server in one command.
 
 ### `npm run startserver` or `yarn run startserver`
+
 
 I have choose unique port 3002 and 4002 just because to make sure the application runs fine for testing.
 
@@ -90,6 +98,7 @@ React sever will be calling on [http://localhost:3002](http://localhost:3002)
 steps:
   - Clone the repo - https://github.com/abdulnizam/weather-app.git
   - cd weather-app
+  - cp .env-example .env
   - docker-compose up --build
 
 from docker hub
