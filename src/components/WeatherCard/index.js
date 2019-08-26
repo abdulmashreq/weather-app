@@ -60,7 +60,7 @@ class WeatherCard extends Component {
                   {updatetime}
                 </Item.Meta>
                 <Item.Meta data-test="iconTag">
-                  <i className={'wi '+icon[_icon]} />
+                  <i className={'wi '+icon(_icon)} />
                   {condition}
                 </Item.Meta>
                 <Item.Meta data-test="temperatureTag">
